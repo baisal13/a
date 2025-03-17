@@ -1,0 +1,45 @@
+
+uml_final.node('Calculator', '''
++----------------------+
+|      Calculator      |
++----------------------+
+| - expression: str    |
++----------------------+
+| + add_to_expression()|
+| + remove_last_character() |
+| + clear_expression() |
+| + calculate() -> str |
+| + get_expression() -> str |
++----------------------+
+
+
+uml_final.node('CalculatorWindow', '''
++--------------------------+
+|     CalculatorWindow     |
++--------------------------+
+| - calculator: Calculator |
+| - input_field: QLineEdit |
++--------------------------+
+| + initUI()              |
+| + on_button_click()     |
++--------------------------+
+
+uml_final.node('Button', '''
++------------+
+|   Button   |
++------------+
+| - text: str|
++------------+
+| + on_click() |
++------------+
+
+uml_final.node('Main', '''
++----------------------+
+|        Main         |
++----------------------+
+| + QApplication      |
+| + CalculatorWindow  |
+| + sys.exit(app.exec_()) |
++----------------------+
+
+
